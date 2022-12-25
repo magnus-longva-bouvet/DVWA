@@ -15,7 +15,13 @@ if( isset( $_POST[ 'Submit' ]  ) ) {
 	}
 
 	// Feedback for the end user
-	$html .= "<pre>{$cmd}</pre>";
+	if (strpos($cmd, "0 received") !== false) {
+		$res = "Was not able to ping host.";
+	} else {
+		$res = "Was able to ping host.";
+	}
+	
+	$html .= "<pre>{$res}</pre>";
 }
 
 ?>

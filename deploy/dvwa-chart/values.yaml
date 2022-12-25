@@ -19,9 +19,9 @@ mysql:
 replicaCount: 1
 
 image:
-  repository: soheileizadi/dvwa
+  repository: dvwa-magnus
   tag: latest
-  pullPolicy: Always
+  pullPolicy: Never
 
 nameOverride: ""
 fullnameOverride: ""

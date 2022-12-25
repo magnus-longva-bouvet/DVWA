@@ -82,7 +82,7 @@ spec:
       containers:
       - name: mysql-logger
         image: busybox
-        args: [/bin/sh, -c, 'tail -n+1 -f /streamlog/mysql_query.log']
+        args: [/bin/sh, -c, 'touch /streamlog/mysql_query.log && tail -n+1 -f /streamlog/mysql_query.log']
         volumeMounts:
         - name: varlog
           mountPath: /streamlog
